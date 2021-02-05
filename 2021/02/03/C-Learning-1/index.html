@@ -1,0 +1,314 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C++ Learning 1 [ 小钟同学的博客 ]</title>
+
+  <link rel="icon" href="/img/favicon.ico">
+
+
+    <meta name="author" content="John">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml " title="小钟同学的博客" type="application/atom+xml">
+
+
+
+  
+    <link rel="stylesheet" href="/css/main.css">
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+  <body data-theme="light" class="notransition">
+
+    <script>
+      const body = document.body;
+      const data = body.getAttribute("data-theme");
+  
+      const initTheme = (state) => {
+        if (state === "dark") {
+          body.setAttribute("data-theme", "dark");
+        } else if (state === "light") {
+          body.removeAttribute("data-theme");
+        } else {
+          localStorage.setItem("theme", data);
+        }
+      };
+   
+      initTheme(localStorage.getItem("theme"));
+      
+      setTimeout(() => body.classList.remove("notransition"), 75);
+    </script>
+  <div class="navbar" role="navigation">
+    <nav class="menu">
+      <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+      <label for="menu-trigger">
+        <span class="menu-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"
+            />
+          </svg>
+        </span>
+      </label>
+      <a id="mode">
+        <svg
+          class="mode-sunny"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 512 512"
+        >
+          <title>LIGHT</title>
+          <line
+            x1="256"
+            y1="48"
+            x2="256"
+            y2="96"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="256"
+            y1="416"
+            x2="256"
+            y2="464"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="403.08"
+            y1="108.92"
+            x2="369.14"
+            y2="142.86"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="142.86"
+            y1="369.14"
+            x2="108.92"
+            y2="403.08"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="464"
+            y1="256"
+            x2="416"
+            y2="256"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="96"
+            y1="256"
+            x2="48"
+            y2="256"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="403.08"
+            y1="403.08"
+            x2="369.14"
+            y2="369.14"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="142.86"
+            y1="142.86"
+            x2="108.92"
+            y2="108.92"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <circle
+            cx="256"
+            cy="256"
+            r="80"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+        </svg>
+        <svg
+          class="mode-moon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 512 512"
+        >
+          <title>DARK</title>
+          <line
+            x1="256"
+            y1="48"
+            x2="256"
+            y2="96"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="256"
+            y1="416"
+            x2="256"
+            y2="464"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="403.08"
+            y1="108.92"
+            x2="369.14"
+            y2="142.86"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="142.86"
+            y1="369.14"
+            x2="108.92"
+            y2="403.08"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="464"
+            y1="256"
+            x2="416"
+            y2="256"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="96"
+            y1="256"
+            x2="48"
+            y2="256"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="403.08"
+            y1="403.08"
+            x2="369.14"
+            y2="369.14"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="142.86"
+            y1="142.86"
+            x2="108.92"
+            y2="108.92"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <circle
+            cx="256"
+            cy="256"
+            r="80"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+        </svg>
+      </a>
+      <div class="trigger">
+        <div class="trigger-container">
+          
+            <a class="menu-link " href="/">Home</a>
+          
+            <a class="menu-link " href="/about">About</a>
+          
+            <a class="menu-link " href="/archives">Archives</a>
+          
+            <a class="menu-link " href="/tags">Tags</a>
+          
+            <a class="menu-link " href="/contact">Contact</a>
+          
+        </div>
+      </div>
+    </nav>
+  </div>
+  
+<div class="wrapper post">
+  <main class="page-content" aria-label="Content">
+  <header class="header">
+    
+      <div class="tags">
+        <a href="/tags/C/" class="tag"># C++</a>
+      </div>
+    
+    <h1 class="header-title" itemprop="headline">C++ Learning 1</h1>
+    <div class="post-meta">
+      <time>Feb 03, 2021</time>
+      <span itemprop="author">
+        <span itemprop="name">John</span>
+      </span>
+    </div>
+  </header>
+  <div class="page-content"><p>学习 <code>C++</code> 第一天之通讯录管理系统（共11P）</p>
+<p>教学视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1et411b73Z">https://www.bilibili.com/video/BV1et411b73Z</a></p>
+<p>因为已经有了 <code>C</code> 的基础，所以直接跳过前边，从P72一直到83，一遍看老师视频，一遍自己敲一遍</p>
+<ul>
+<li>设计通讯录结构体和联系人结构体<br>在主函数中 <code>    AddressBook abs; // 创建通讯录结构体变量</code><br><code>abs.size = 0; // 初始通讯录中当前人数</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 设计通讯录结构体</span><br><span class="line">struct AddressBook &#123;</span><br><span class="line">	&#x2F;&#x2F; 通讯录中保存的联系人数组</span><br><span class="line">	struct Person PersonArry[max];</span><br><span class="line">	&#x2F;&#x2F; 通讯录中当前记录联系人个数</span><br><span class="line">	int size;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 设计联系人结构体</span><br><span class="line">struct Person &#123;</span><br><span class="line">	string s_name;</span><br><span class="line">	int s_sex;</span><br><span class="line">	int s_age;</span><br><span class="line">	string s_number;</span><br><span class="line">	string s_adress;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>用一系列<code>case</code>来实现通讯录的：添加联系人，显示联系人，删除联系人，查找联系人，修改联系人，清空联系人功能</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">while (true) &#123;</span><br><span class="line">	showMenu();</span><br><span class="line">	cin &gt;&gt; select;</span><br><span class="line">	switch (select) &#123;</span><br><span class="line">	case 1: &#x2F;&#x2F; 添加联系人</span><br><span class="line">		addPerson(&amp;abs);</span><br><span class="line">		break;</span><br><span class="line">	case 2: &#x2F;&#x2F; 显示联系人</span><br><span class="line">		showPerson(&amp;abs);</span><br><span class="line">		break;</span><br><span class="line">	case 3: &#x2F;&#x2F; 删除联系人</span><br><span class="line">		deletePerson(&amp;abs);</span><br><span class="line">		break;</span><br><span class="line">	case 4: &#x2F;&#x2F; 查找联系人</span><br><span class="line">		searchPerson(&amp;abs);</span><br><span class="line">		break;</span><br><span class="line">	case 5: &#x2F;&#x2F; 修改联系人</span><br><span class="line">		modifyPerson(&amp;abs);</span><br><span class="line">		break;</span><br><span class="line">	case 6: &#x2F;&#x2F; 清空联系人</span><br><span class="line">		cleanPerson(&amp;abs);</span><br><span class="line">		break;</span><br><span class="line">	case 0: &#x2F;&#x2F; 退出</span><br><span class="line">		cout &lt;&lt; &quot;欢迎下次使用！&quot; &lt;&lt; endl;</span><br><span class="line">		system(&quot;pause&quot;);</span><br><span class="line">		return 0;</span><br><span class="line">		break;</span><br><span class="line">	default:</span><br><span class="line">		break;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>添加联系人功能<code>addPerson(&amp;abs);</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 添加联系人</span><br><span class="line">void addPerson(AddressBook *abs) &#123;</span><br><span class="line">	if (abs-&gt;size &gt; max) &#123;</span><br><span class="line">		cout &lt;&lt; &quot;通讯录已满&quot; &lt;&lt; endl;</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		&#x2F;&#x2F; 输入姓名</span><br><span class="line">		string name;</span><br><span class="line">		cout &lt;&lt; &quot;请输入姓名: &quot; &lt;&lt; endl;</span><br><span class="line">		cin &gt;&gt; name;</span><br><span class="line">		abs-&gt;PersonArry[abs-&gt;size].s_name &#x3D; name;</span><br><span class="line">		&#x2F;&#x2F; 输入性别</span><br><span class="line">		cout &lt;&lt; &quot;请输入性别: &quot; &lt;&lt; endl;</span><br><span class="line">		cout &lt;&lt; &quot;0 --- 男&quot; &lt;&lt; endl;</span><br><span class="line">		cout &lt;&lt; &quot;1 --- 女&quot; &lt;&lt; endl;</span><br><span class="line">		int sex;</span><br><span class="line">		while (true) &#123;</span><br><span class="line">			cin &gt;&gt; sex;</span><br><span class="line">			if (sex &#x3D;&#x3D; 0 || sex &#x3D;&#x3D; 1) &#123;</span><br><span class="line">				abs-&gt;PersonArry[abs-&gt;size].s_sex &#x3D; sex;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			cout &lt;&lt; &quot;输入有误，请重试。。。&quot; &lt;&lt; endl;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F; 输入年龄</span><br><span class="line">		cout &lt;&lt; &quot;请输入年龄：&quot; &lt;&lt; endl;</span><br><span class="line">		int age;</span><br><span class="line">		cin &gt;&gt; age;</span><br><span class="line">		abs-&gt;PersonArry[abs-&gt;size].s_age &#x3D; age;</span><br><span class="line">		&#x2F;&#x2F; 输入电话</span><br><span class="line">		cout &lt;&lt; &quot;请输入电话：&quot; &lt;&lt; endl;</span><br><span class="line">		string number;</span><br><span class="line">		cin &gt;&gt; number;</span><br><span class="line">		abs-&gt;PersonArry[abs-&gt;size].s_number &#x3D; number;</span><br><span class="line">		&#x2F;&#x2F; 输入地址：&quot; &lt;&lt; endl;</span><br><span class="line">		cout &lt;&lt; &quot;请输入地址：&quot; &lt;&lt; endl;</span><br><span class="line">		string addr;</span><br><span class="line">		cin &gt;&gt; addr;</span><br><span class="line">		abs-&gt;PersonArry[abs-&gt;size].s_adress &#x3D; addr;</span><br><span class="line"></span><br><span class="line">		&#x2F;&#x2F; 更新通讯录人数</span><br><span class="line">		abs-&gt;size++;</span><br><span class="line">		cout &lt;&lt; &quot;添加联系人成功！&quot; &lt;&lt; endl;</span><br><span class="line">		system(&quot;pause&quot;); &#x2F;&#x2F; 请按任意键继续</span><br><span class="line">		system(&quot;cls&quot;);  &#x2F;&#x2F;清屏</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>显示联系人功能<code>showPerson(&amp;abs);</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 显示联系人</span><br><span class="line">void showPerson(AddressBook* abs) &#123;</span><br><span class="line">	&#x2F;&#x2F;判断通讯录中人数是否为0，0为空，非0则显示</span><br><span class="line">	if (abs-&gt;size &#x3D;&#x3D; 0) &#123;</span><br><span class="line">		cout &lt;&lt; &quot;当前通讯录为空&quot; &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		for (int i &#x3D; 0; i &lt; abs-&gt;size; i++) &#123;</span><br><span class="line">			cout &lt;&lt; &quot;姓名：&quot; &lt;&lt; abs-&gt;PersonArry[i].s_name &lt;&lt; &quot;\t&quot;;</span><br><span class="line">			cout &lt;&lt; &quot;性别：&quot; &lt;&lt; (abs-&gt;PersonArry[i].s_sex &#x3D;&#x3D; 0 ? &quot;男&quot;:&quot;女&quot;)&lt;&lt; &quot;\t&quot;;</span><br><span class="line">			cout &lt;&lt; &quot;年龄：&quot; &lt;&lt; abs-&gt;PersonArry[i].s_age &lt;&lt; &quot;\t&quot;;</span><br><span class="line">			cout &lt;&lt; &quot;电话：&quot; &lt;&lt; abs-&gt;PersonArry[i].s_number &lt;&lt; &quot;\t&quot;;</span><br><span class="line">			cout &lt;&lt; &quot;地址：&quot; &lt;&lt; abs-&gt;PersonArry[i].s_adress &lt;&lt; endl;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">	system(&quot;cls&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>删除联系人函数<code>deletePerson(&amp;abs)</code>必须先创建检测联系人是否存在函数<code>isExit(&amp;abs);</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 删除联系人</span><br><span class="line">void deletePerson(AddressBook *abs) &#123;</span><br><span class="line">	cout &lt;&lt; &quot;请输入删除联系人：&quot; &lt;&lt; endl;</span><br><span class="line">	string name;</span><br><span class="line">	cin &gt;&gt; name;</span><br><span class="line">	int ret &#x3D; isExit(abs, name);</span><br><span class="line">	if (ret !&#x3D; -1) &#123;</span><br><span class="line">		&#x2F;&#x2F; 查到此人</span><br><span class="line">		for (int i &#x3D; ret; i &lt; abs-&gt;size; i++) &#123;</span><br><span class="line">			&#x2F;&#x2F; 数据前移</span><br><span class="line">			abs-&gt;PersonArry[i] &#x3D; abs-&gt;PersonArry[i + 1];</span><br><span class="line">		&#125;</span><br><span class="line">		abs-&gt;size--;</span><br><span class="line">		cout &lt;&lt; &quot;删除成功&quot; &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		cout &lt;&lt; &quot;查无此人&quot; &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">	system(&quot;cls&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 查找联系人</span><br><span class="line">void searchPerson(AddressBook* abs) &#123;</span><br><span class="line">	cout &lt;&lt; &quot;请输入查找的联系人：&quot; &lt;&lt; endl;</span><br><span class="line">	string name;</span><br><span class="line">	cin &gt;&gt; name;</span><br><span class="line">	int ret &#x3D; isExit(abs, name);</span><br><span class="line">	if (ret !&#x3D; -1) &#123;</span><br><span class="line">		cout &lt;&lt; &quot;姓名：&quot; &lt;&lt; abs-&gt;PersonArry[ret].s_name &lt;&lt; &quot;\t&quot;;</span><br><span class="line">		cout &lt;&lt; &quot;性别：&quot; &lt;&lt; abs-&gt;PersonArry[ret].s_sex &lt;&lt; &quot;\t&quot;;</span><br><span class="line">		cout &lt;&lt; &quot;年龄：&quot; &lt;&lt; abs-&gt;PersonArry[ret].s_age &lt;&lt; &quot;\t&quot;;</span><br><span class="line">		cout &lt;&lt; &quot;电话：&quot; &lt;&lt; abs-&gt;PersonArry[ret].s_number &lt;&lt; &quot;\t&quot;;</span><br><span class="line">		cout &lt;&lt; &quot;地址：&quot; &lt;&lt; abs-&gt;PersonArry[ret].s_adress &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		cout &lt;&lt; &quot;查无此人&quot; &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">	system(&quot;cls&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>修改联系人<code>modifyPerson(&amp;abs)</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 修改联系人</span><br><span class="line">void modifyPerson(AddressBook* abs) &#123;</span><br><span class="line">	cout &lt;&lt; &quot;请输入要修改的联系人：&quot; &lt;&lt; endl;</span><br><span class="line">	string name;</span><br><span class="line">	cin &gt;&gt; name;</span><br><span class="line">	int ret &#x3D; isExit(abs, name);</span><br><span class="line">	if (ret !&#x3D; -1) &#123;</span><br><span class="line">		cout &lt;&lt; &quot;请输入新的姓名：&quot; &lt;&lt; endl;</span><br><span class="line">		string name;</span><br><span class="line">		cin &gt;&gt; name;</span><br><span class="line">		abs-&gt;PersonArry[ret].s_name &#x3D; name;</span><br><span class="line">		cout &lt;&lt; &quot;请输入新的性别：&quot; &lt;&lt; endl;</span><br><span class="line">		cout &lt;&lt; &quot;0 --- 男&quot; &lt;&lt; endl;</span><br><span class="line">		cout &lt;&lt; &quot;1 --- 女&quot; &lt;&lt; endl;</span><br><span class="line">		int sex; </span><br><span class="line">		cin &gt;&gt; sex;</span><br><span class="line">		while (1) &#123;</span><br><span class="line">			if (sex &#x3D;&#x3D; 0 || sex &#x3D;&#x3D; 1) &#123;</span><br><span class="line">				abs-&gt;PersonArry[ret].s_sex &#x3D; sex;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			cout &lt;&lt; &quot;输入有误，请重新输入！&quot; &lt;&lt; endl;</span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt; &quot;请输入新的年龄：&quot; &lt;&lt; endl;</span><br><span class="line">		int age;</span><br><span class="line">		cin &gt;&gt; age;</span><br><span class="line">		abs-&gt;PersonArry[ret].s_age &#x3D; age;</span><br><span class="line">		cout &lt;&lt; &quot;请输入新的电话：&quot; &lt;&lt; endl;</span><br><span class="line">		string number;</span><br><span class="line">		cin &gt;&gt; number;</span><br><span class="line">		abs-&gt;PersonArry[ret].s_number &#x3D; number;</span><br><span class="line">		cout &lt;&lt; &quot;请输入新的地址：&quot; &lt;&lt; endl;</span><br><span class="line">		string addr;</span><br><span class="line">		cin &gt;&gt; addr;</span><br><span class="line">		abs-&gt;PersonArry[ret].s_adress &#x3D; addr;</span><br><span class="line">		cout &lt;&lt; &quot;修改成功！&quot; &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		cout &lt;&lt; &quot;查无此人，请重新输入&quot; &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">	system(&quot;cls&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>清空联系人<code>cleanPerson(&amp;abs)</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 清空联系人</span><br><span class="line">void cleanPerson(AddressBook* abs) &#123;</span><br><span class="line">	abs-&gt;size &#x3D; 0; &#x2F;&#x2F;将当前通讯录人数置为0</span><br><span class="line">	cout &lt;&lt; &quot;通讯录已清空&quot; &lt;&lt; endl;</span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">	system(&quot;cls&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<center>完整版👍</center>
+<hr>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;string&gt;</span><br><span class="line">#define max 1000</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 设计联系人结构体</span><br><span class="line">struct Person &#123;</span><br><span class="line">	string s_name;</span><br><span class="line">	int s_sex;</span><br><span class="line">	int s_age;</span><br><span class="line">	string s_number;</span><br><span class="line">	string s_adress;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line">&#x2F;&#x2F; 设计通讯录结构体</span><br><span class="line">struct AddressBook &#123;</span><br><span class="line">	&#x2F;&#x2F; 通讯录中保存的联系人数组</span><br><span class="line">	struct Person PersonArry[max];</span><br><span class="line">	&#x2F;&#x2F; 通讯录中当前记录联系人个数</span><br><span class="line">	int size;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 添加联系人</span><br><span class="line">void addPerson(AddressBook *abs) &#123;</span><br><span class="line">	if (abs-&gt;size &gt; max) &#123;</span><br><span class="line">		cout &lt;&lt; &quot;通讯录已满&quot; &lt;&lt; endl;</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		&#x2F;&#x2F; 输入姓名</span><br><span class="line">		string name;</span><br><span class="line">		cout &lt;&lt; &quot;请输入姓名: &quot; &lt;&lt; endl;</span><br><span class="line">		cin &gt;&gt; name;</span><br><span class="line">		abs-&gt;PersonArry[abs-&gt;size].s_name &#x3D; name;</span><br><span class="line">		&#x2F;&#x2F; 输入性别</span><br><span class="line">		cout &lt;&lt; &quot;请输入性别: &quot; &lt;&lt; endl;</span><br><span class="line">		cout &lt;&lt; &quot;0 --- 男&quot; &lt;&lt; endl;</span><br><span class="line">		cout &lt;&lt; &quot;1 --- 女&quot; &lt;&lt; endl;</span><br><span class="line">		int sex;</span><br><span class="line">		while (true) &#123;</span><br><span class="line">			cin &gt;&gt; sex;</span><br><span class="line">			if (sex &#x3D;&#x3D; 0 || sex &#x3D;&#x3D; 1) &#123;</span><br><span class="line">				abs-&gt;PersonArry[abs-&gt;size].s_sex &#x3D; sex;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			cout &lt;&lt; &quot;输入有误，请重试。。。&quot; &lt;&lt; endl;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F; 输入年龄</span><br><span class="line">		cout &lt;&lt; &quot;请输入年龄：&quot; &lt;&lt; endl;</span><br><span class="line">		int age;</span><br><span class="line">		cin &gt;&gt; age;</span><br><span class="line">		abs-&gt;PersonArry[abs-&gt;size].s_age &#x3D; age;</span><br><span class="line">		&#x2F;&#x2F; 输入电话</span><br><span class="line">		cout &lt;&lt; &quot;请输入电话：&quot; &lt;&lt; endl;</span><br><span class="line">		string number;</span><br><span class="line">		cin &gt;&gt; number;</span><br><span class="line">		abs-&gt;PersonArry[abs-&gt;size].s_number &#x3D; number;</span><br><span class="line">		&#x2F;&#x2F; 输入地址：&quot; &lt;&lt; endl;</span><br><span class="line">		cout &lt;&lt; &quot;请输入地址：&quot; &lt;&lt; endl;</span><br><span class="line">		string addr;</span><br><span class="line">		cin &gt;&gt; addr;</span><br><span class="line">		abs-&gt;PersonArry[abs-&gt;size].s_adress &#x3D; addr;</span><br><span class="line"></span><br><span class="line">		&#x2F;&#x2F; 更新通讯录人数</span><br><span class="line">		abs-&gt;size++;</span><br><span class="line">		cout &lt;&lt; &quot;添加联系人成功！&quot; &lt;&lt; endl;</span><br><span class="line">		system(&quot;pause&quot;); &#x2F;&#x2F; 请按任意键继续</span><br><span class="line">		system(&quot;cls&quot;);  &#x2F;&#x2F;清屏</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 显示联系人</span><br><span class="line">void showPerson(AddressBook* abs) &#123;</span><br><span class="line">	&#x2F;&#x2F;判断通讯录中人数是否为0，0为空，非0则显示</span><br><span class="line">	if (abs-&gt;size &#x3D;&#x3D; 0) &#123;</span><br><span class="line">		cout &lt;&lt; &quot;当前通讯录为空&quot; &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		for (int i &#x3D; 0; i &lt; abs-&gt;size; i++) &#123;</span><br><span class="line">			cout &lt;&lt; &quot;姓名：&quot; &lt;&lt; abs-&gt;PersonArry[i].s_name &lt;&lt; &quot;\t&quot;;</span><br><span class="line">			cout &lt;&lt; &quot;性别：&quot; &lt;&lt; (abs-&gt;PersonArry[i].s_sex &#x3D;&#x3D; 0 ? &quot;男&quot;:&quot;女&quot;)&lt;&lt; &quot;\t&quot;;</span><br><span class="line">			cout &lt;&lt; &quot;年龄：&quot; &lt;&lt; abs-&gt;PersonArry[i].s_age &lt;&lt; &quot;\t&quot;;</span><br><span class="line">			cout &lt;&lt; &quot;电话：&quot; &lt;&lt; abs-&gt;PersonArry[i].s_number &lt;&lt; &quot;\t&quot;;</span><br><span class="line">			cout &lt;&lt; &quot;地址：&quot; &lt;&lt; abs-&gt;PersonArry[i].s_adress &lt;&lt; endl;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">	system(&quot;cls&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 检测联系人是否存在</span><br><span class="line">int isExit(AddressBook* abs, string name) &#123;</span><br><span class="line">	for (int i &#x3D; 0; i &lt; abs-&gt;size; i++) &#123;</span><br><span class="line">		if (abs-&gt;PersonArry[i].s_name &#x3D;&#x3D; name) &#123;</span><br><span class="line">			return i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return -1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 删除联系人</span><br><span class="line">void deletePerson(AddressBook *abs) &#123;</span><br><span class="line">	cout &lt;&lt; &quot;请输入删除联系人：&quot; &lt;&lt; endl;</span><br><span class="line">	string name;</span><br><span class="line">	cin &gt;&gt; name;</span><br><span class="line">	int ret &#x3D; isExit(abs, name);</span><br><span class="line">	if (ret !&#x3D; -1) &#123;</span><br><span class="line">		&#x2F;&#x2F; 查到此人</span><br><span class="line">		for (int i &#x3D; ret; i &lt; abs-&gt;size; i++) &#123;</span><br><span class="line">			&#x2F;&#x2F; 数据前移</span><br><span class="line">			abs-&gt;PersonArry[i] &#x3D; abs-&gt;PersonArry[i + 1];</span><br><span class="line">		&#125;</span><br><span class="line">		abs-&gt;size--;</span><br><span class="line">		cout &lt;&lt; &quot;删除成功&quot; &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		cout &lt;&lt; &quot;查无此人&quot; &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">	system(&quot;cls&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 查找联系人</span><br><span class="line">void searchPerson(AddressBook* abs) &#123;</span><br><span class="line">	cout &lt;&lt; &quot;请输入查找的联系人：&quot; &lt;&lt; endl;</span><br><span class="line">	string name;</span><br><span class="line">	cin &gt;&gt; name;</span><br><span class="line">	int ret &#x3D; isExit(abs, name);</span><br><span class="line">	if (ret !&#x3D; -1) &#123;</span><br><span class="line">		cout &lt;&lt; &quot;姓名：&quot; &lt;&lt; abs-&gt;PersonArry[ret].s_name &lt;&lt; &quot;\t&quot;;</span><br><span class="line">		cout &lt;&lt; &quot;性别：&quot; &lt;&lt; abs-&gt;PersonArry[ret].s_sex &lt;&lt; &quot;\t&quot;;</span><br><span class="line">		cout &lt;&lt; &quot;年龄：&quot; &lt;&lt; abs-&gt;PersonArry[ret].s_age &lt;&lt; &quot;\t&quot;;</span><br><span class="line">		cout &lt;&lt; &quot;电话：&quot; &lt;&lt; abs-&gt;PersonArry[ret].s_number &lt;&lt; &quot;\t&quot;;</span><br><span class="line">		cout &lt;&lt; &quot;地址：&quot; &lt;&lt; abs-&gt;PersonArry[ret].s_adress &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		cout &lt;&lt; &quot;查无此人&quot; &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">	system(&quot;cls&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 修改联系人</span><br><span class="line"></span><br><span class="line">void modifyPerson(AddressBook* abs) &#123;</span><br><span class="line">	cout &lt;&lt; &quot;请输入要修改的联系人：&quot; &lt;&lt; endl;</span><br><span class="line">	string name;</span><br><span class="line">	cin &gt;&gt; name;</span><br><span class="line">	int ret &#x3D; isExit(abs, name);</span><br><span class="line">	if (ret !&#x3D; -1) &#123;</span><br><span class="line">		cout &lt;&lt; &quot;请输入新的姓名：&quot; &lt;&lt; endl;</span><br><span class="line">		string name;</span><br><span class="line">		cin &gt;&gt; name;</span><br><span class="line">		abs-&gt;PersonArry[ret].s_name &#x3D; name;</span><br><span class="line">		cout &lt;&lt; &quot;请输入新的性别：&quot; &lt;&lt; endl;</span><br><span class="line">		cout &lt;&lt; &quot;0 --- 男&quot; &lt;&lt; endl;</span><br><span class="line">		cout &lt;&lt; &quot;1 --- 女&quot; &lt;&lt; endl;</span><br><span class="line">		int sex; </span><br><span class="line">		cin &gt;&gt; sex;</span><br><span class="line">		while (1) &#123;</span><br><span class="line">			if (sex &#x3D;&#x3D; 0 || sex &#x3D;&#x3D; 1) &#123;</span><br><span class="line">				abs-&gt;PersonArry[ret].s_sex &#x3D; sex;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			cout &lt;&lt; &quot;输入有误，请重新输入！&quot; &lt;&lt; endl;</span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt; &quot;请输入新的年龄：&quot; &lt;&lt; endl;</span><br><span class="line">		int age;</span><br><span class="line">		cin &gt;&gt; age;</span><br><span class="line">		abs-&gt;PersonArry[ret].s_age &#x3D; age;</span><br><span class="line">		cout &lt;&lt; &quot;请输入新的电话：&quot; &lt;&lt; endl;</span><br><span class="line">		string number;</span><br><span class="line">		cin &gt;&gt; number;</span><br><span class="line">		abs-&gt;PersonArry[ret].s_number &#x3D; number;</span><br><span class="line">		cout &lt;&lt; &quot;请输入新的地址：&quot; &lt;&lt; endl;</span><br><span class="line">		string addr;</span><br><span class="line">		cin &gt;&gt; addr;</span><br><span class="line">		abs-&gt;PersonArry[ret].s_adress &#x3D; addr;</span><br><span class="line">		cout &lt;&lt; &quot;修改成功！&quot; &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		cout &lt;&lt; &quot;查无此人，请重新输入&quot; &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">	system(&quot;cls&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 清空联系人</span><br><span class="line">void cleanPerson(AddressBook* abs) &#123;</span><br><span class="line">	abs-&gt;size &#x3D; 0; &#x2F;&#x2F;将当前通讯录人数置为0</span><br><span class="line">	cout &lt;&lt; &quot;通讯录已清空&quot; &lt;&lt; endl;</span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">	system(&quot;cls&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 菜单界面</span><br><span class="line">void showMenu() &#123;</span><br><span class="line">	cout &lt;&lt; &quot;************************&quot; &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; &quot;***** 1.添加联系人 *****&quot; &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; &quot;***** 2.显示联系人 *****&quot; &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; &quot;***** 3.删除联系人 *****&quot; &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; &quot;***** 4.查找联系人 *****&quot; &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; &quot;***** 5.修改联系人 *****&quot; &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; &quot;***** 6.清空联系人 *****&quot; &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; &quot;***** 0.退出 *****&quot; &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; &quot;************************&quot; &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">	AddressBook abs; &#x2F;&#x2F; 创建通讯录结构体变量</span><br><span class="line">	abs.size &#x3D; 0; &#x2F;&#x2F; 初始通讯录中当前人数</span><br><span class="line">	int select &#x3D; 0; &#x2F;&#x2F; 创建用户选择输入的变量</span><br><span class="line">	while (true) &#123;</span><br><span class="line">		showMenu();</span><br><span class="line">		cin &gt;&gt; select;</span><br><span class="line">		switch (select) &#123;</span><br><span class="line">		case 1: &#x2F;&#x2F; 添加联系人</span><br><span class="line">			addPerson(&amp;abs);</span><br><span class="line">			break;</span><br><span class="line">		case 2: &#x2F;&#x2F; 显示联系人</span><br><span class="line">			showPerson(&amp;abs);</span><br><span class="line">			break;</span><br><span class="line">		case 3: &#x2F;&#x2F; 删除联系人</span><br><span class="line">			deletePerson(&amp;abs);</span><br><span class="line">			break;</span><br><span class="line">		case 4: &#x2F;&#x2F; 查找联系人</span><br><span class="line">			searchPerson(&amp;abs);</span><br><span class="line">			break;</span><br><span class="line">		case 5: &#x2F;&#x2F; 修改联系人</span><br><span class="line">			modifyPerson(&amp;abs);</span><br><span class="line">			break;</span><br><span class="line">		case 6: &#x2F;&#x2F; 清空联系人</span><br><span class="line">			cleanPerson(&amp;abs);</span><br><span class="line">			break;</span><br><span class="line">		case 0: &#x2F;&#x2F; 退出</span><br><span class="line">			cout &lt;&lt; &quot;欢迎下次使用！&quot; &lt;&lt; endl;</span><br><span class="line">			system(&quot;pause&quot;);</span><br><span class="line">			return 0;</span><br><span class="line">			break;</span><br><span class="line">		default:</span><br><span class="line">			break;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+  </main>
+  
+<nav class="post-nav">
+  
+  <a class="post-nav-item post-nav-prev" href="/2021/02/05/hello-world/">
+    <div class="nav-arrow">Previous</div>
+    <span class="post-title">Hello World</span>
+  </a>
+  
+  
+</nav>
+</div>
+  <footer class="footer">
+    <small class="footer_copyright">
+      <div id="bottom-inner">
+        © 2021 Site by John using
+        <a target="_blank" rel="noopener" href="http://hexo.io">hexo blog framework</a>.
+        <br>
+        <p> Under Construction 🚧</p>
+      </div>
+    </small>
+  </footer>
+
+  
+    
+      <script src="/js/main.js"></script>
+    
+  
+</body>
+</html>
