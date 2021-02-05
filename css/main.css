@@ -258,7 +258,8 @@ h6 > a {
 
 a {
   color: inherit;
-  text-decoration-color: #d2c7c7; }
+  text-decoration-color: #d2c7c7;
+  text-decoration: none; }
   a:hover {
     color: #f66; }
   a:focus {
@@ -728,21 +729,21 @@ pre .xml .css,
 pre .xml .cdata {
   opacity: 0.5; }
 
-.page-content .highlight,
-.page-content .highlight table {
+.post .highlight,
+.post .highlight table {
   margin: 0;
   width: 100%; }
 
-.page-content .highlight {
+.post .highlight {
   overflow-x: auto; }
 
-.page-content .highlight table,
-.page-content .highlight tr,
-.page-content .highlight td {
+.post .highlight table,
+.post .highlight tr,
+.post .highlight td {
   padding: 0;
   border-collapse: collapse; }
 
-.page-content code {
+.post code {
   font-family: "Roboto Mono", "Menlo", "Consolas", monospace;
   font-size: 13px;
   background-color: #f6f6f6;
@@ -750,7 +751,7 @@ pre .xml .cdata {
   margin: 0 5px;
   border-radius: 2px; }
 
-.page-content pre {
+.post pre {
   font-family: "Roboto Mono", "Menlo", "Consolas", monospace;
   font-size: 13px;
   overflow-x: auto;
@@ -759,22 +760,22 @@ pre .xml .cdata {
   background-color: #f6f6f6;
   line-height: 1.5em; }
 
-.page-content .code pre {
+.post .code pre {
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px; }
 
-.page-content .gutter pre {
+.post .gutter pre {
   padding: 15px 0 15px 15px;
   color: #75715e;
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px; }
 
-.page-content blockquote {
+.post blockquote {
   margin: 2em 0;
   padding-left: 30px;
   border-left: 5px solid #e6e6e6; }
 
-.page-content blockquote p {
+.post blockquote p {
   font-size: 17px;
   font-style: italic;
   line-height: 1.8em;
@@ -826,60 +827,60 @@ pre .xml .cdata {
   .post-meta span[itemprop="author"] {
     border-bottom: 1px dotted #ececec; }
 
-.page-content {
+.post {
   padding-top: 8px; }
-  .page-content iframe {
+  .post iframe {
     text-align: center; }
-  .page-content figure img {
+  .post figure img {
     border-radius: 2px; }
-  .page-content figure figcaption {
+  .post figure figcaption {
     margin-top: 5px;
     font-style: italic;
     font-size: 14px; }
-  .page-content a {
+  .post a {
     color: #f66;
     text-decoration: none;
     border-bottom: 2px solid transparent; }
-    .page-content a:hover {
+    .post a:hover {
       color: #f33;
       border-bottom-color: #f33; }
-    .page-content a:focus {
+    .post a:focus {
       color: #f66; }
-  .page-content > p {
+  .post > p {
     margin: 0;
     padding-top: 15px;
     padding-bottom: 15px; }
-  .page-content ul.task-list {
+  .post ul.task-list {
     list-style: none;
     margin: 0; }
-    .page-content ul.task-list li::before {
+    .post ul.task-list li::before {
       content: ""; }
-    .page-content ul.task-list li input[type="checkbox"] {
+    .post ul.task-list li input[type="checkbox"] {
       margin-right: 10px; }
-  .page-content dl dt {
+  .post dl dt {
     font-weight: 700; }
-  .page-content .page-content h1,
-  .page-content .page-content h2 {
+  .post .post h1,
+  .post .post h2 {
     text-transform: uppercase; }
-  .page-content .page-content h1 a:hover,
-  .page-content .page-content h2 a:hover {
+  .post .post h1 a:hover,
+  .post .post h2 a:hover {
     border-bottom: 3px solid #666; }
-  .page-content .page-content h1 {
+  .post .post h1 {
     font-size: 24px;
     margin: 60px 0 30px;
     position: relative; }
-  .page-content .page-content h1:before {
+  .post .post h1:before {
     content: '';
     border-left: 5px solid #f66;
     position: absolute;
     left: -15px;
     height: 75%;
     top: 12%; }
-  .page-content .page-content h2 {
+  .post .post h2 {
     font-size: 20px;
     margin: 0 0 45px;
     letter-spacing: 1px; }
-  .page-content .page-content h3 {
+  .post .post h3 {
     font-size: 16px;
     margin: 0 0 45px;
     letter-spacing: 1px; }
@@ -935,23 +936,23 @@ pre .xml .cdata {
   background-color: #f6f8fa;
   margin-right: 10px; }
 
-.page-content p,
-.page-content ul,
-.page-content ol {
+.post p,
+.post ul,
+.post ol {
   margin: 1em 0 1.5em; }
 
-.page-content strong {
+.post strong {
   font-weight: 600;
   color: #444; }
 
-.page-content ol {
+.post ol {
   padding-left: 1.6em; }
 
-.page-content ul {
+.post ul {
   padding-left: 15px;
   list-style-type: none; }
 
-.page-content ul li:before {
+.post ul li:before {
   font-weight: 600;
   content: " · ";
   margin: 0;
