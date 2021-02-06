@@ -1,3 +1,20 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Amstelvar';
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/dewjohn/CDN@latest/fonts/Amstelvar-Italic-VF.woff2") format("woff2-variations"), url("https://cdn.jsdelivr.net/gh/dewjohn/CDN@latest/fonts/Amstelvar-Italic-VF.woff2") format("woff2");
+  font-weight: 100 900;
+  font-stretch: 50% 125%;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Amstelvar';
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/dewjohn/CDN@latest/fonts/Amstelvar-Roman-VF.woff2") format("woff2-variations"), url("https://cdn.jsdelivr.net/gh/dewjohn/CDN@latest/fonts/Amstelvar-Roman-VF.woff2") format("woff2");
+  font-weight: 100 900;
+  font-stretch: 50% 125%;
+  font-style: italic; }
+
 @font-face {
   font-family: 'chinese-zodiac';
   font-display: swap;
@@ -107,7 +124,7 @@ body {
   position: relative;
   color: #434648;
   background-color: #fff;
-  font: 400 16px/1.85 "Roboto", "Helvetica Neue", "Hiragino Sans GB", "LiHei Pro", Arial, serif;
+  font: 400 16px/1.85 "Amstelvar", "Roboto", "Helvetica Neue", "Hiragino Sans GB", "LiHei Pro", Arial, serif;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -webkit-font-feature-settings: "kern" 1;
@@ -166,7 +183,7 @@ ul {
     display: list-item;
     text-align: -webkit-match-parent; }
   ul li::before {
-    content: "\FE52";
+    content: "•";
     display: inline-block;
     top: -1px;
     width: 1.2em;
@@ -271,7 +288,6 @@ em {
 
 blockquote {
   color: #6b7886;
-  font-style: italic;
   text-align: center;
   opacity: 0.9;
   border-top: 1px solid #ececec;
@@ -407,7 +423,8 @@ mark,
     text-decoration: none;
     padding: 5px 8px;
     opacity: 0.7;
-    letter-spacing: 0.3px; }
+    letter-spacing: 0.3px;
+    font-style: normal; }
     .menu .menu-link:hover {
       opacity: 1; }
     .menu .menu-link:not(:last-child) {
@@ -833,83 +850,92 @@ pre .xml .cdata {
   .post-meta span[itemprop="author"] {
     border-bottom: 1px dotted #ececec; }
 
-.post {
-  padding-top: 8px; }
-  .post iframe {
+.page-content {
+  padding-top: 8px;
+  word-break: break-all;
+  overflow-wrap: break-word; }
+  .page-content iframe {
     text-align: center; }
-  .post figure img {
+  .page-content figure img {
     border-radius: 2px; }
-  .post figure figcaption {
+  .page-content figure figcaption {
     margin-top: 5px;
     font-style: italic;
     font-size: 14px; }
-  .post a {
+  .page-content a {
     color: #f66;
     word-break: break-word;
     text-decoration: none;
     border-bottom: 2px solid transparent; }
-    .post a:hover {
+    .page-content a:hover {
       color: #f33;
       border-bottom-color: #f33; }
-    .post a:focus {
+    .page-content a:focus {
       color: #f66; }
-  .post > p {
+  .page-content > p {
     margin: 0;
     padding-top: 15px;
     padding-bottom: 15px; }
-  .post ul.task-list {
+  .page-content ul.task-list {
     list-style: none;
     margin: 0; }
-    .post ul.task-list li::before {
+    .page-content ul.task-list li::before {
       content: ""; }
-    .post ul.task-list li input[type="checkbox"] {
+    .page-content ul.task-list li input[type="checkbox"] {
       margin-right: 10px; }
-  .post dl dt {
+  .page-content dl dt {
     font-weight: 700; }
-  .post .post h1,
-  .post h2,
-  .post h3,
-  .post h4,
-  .post h5,
-  .post h6 {
+  .page-content .post h1,
+  .page-content h2,
+  .page-content h3,
+  .page-content h4,
+  .page-content h5,
+  .page-content h6 {
     color: #0d122b;
     font-weight: 700;
     margin-top: 30px;
-    margin-bottom: 0;
-    position: relative;
-    outline: none; }
-    .post .post h1:hover,
-    .post h2:hover,
-    .post h3:hover,
-    .post h4:hover,
-    .post h5:hover,
-    .post h6:hover {
+    margin-bottom: 0; }
+    .page-content .post h1:hover .headerlink,
+    .page-content h2:hover .headerlink,
+    .page-content h3:hover .headerlink,
+    .page-content h4:hover .headerlink,
+    .page-content h5:hover .headerlink,
+    .page-content h6:hover .headerlink {
       color: #f66;
       opacity: 1; }
-      .post .post h1:hover::before,
-      .post h2:hover::before,
-      .post h3:hover::before,
-      .post h4:hover::before,
-      .post h5:hover::before,
-      .post h6:hover::before {
+    .page-content .post h1 .headerlink,
+    .page-content h2 .headerlink,
+    .page-content h3 .headerlink,
+    .page-content h4 .headerlink,
+    .page-content h5 .headerlink,
+    .page-content h6 .headerlink {
+      position: relative;
+      opacity: 0;
+      outline: none; }
+      .page-content .post h1 .headerlink::before,
+      .page-content h2 .headerlink::before,
+      .page-content h3 .headerlink::before,
+      .page-content h4 .headerlink::before,
+      .page-content h5 .headerlink::before,
+      .page-content h6 .headerlink::before {
         content: "#";
         position: absolute;
         right: -3px;
         width: 1em;
         font-weight: 700; }
-  .post h1 {
+  .page-content h1 {
     font-size: 24px; }
-  .post h2 {
+  .page-content h2 {
     font-size: 22px; }
-  .post h3 {
+  .page-content h3 {
     font-size: 20px;
     border-bottom: 1px solid #ececec;
     padding-bottom: 4px; }
-  .post h4 {
+  .page-content h4 {
     font-size: 20px; }
-  .post h5 {
+  .page-content h5 {
     font-size: 16px; }
-  .post h6 {
+  .page-content h6 {
     font-size: 14px; }
 
 .post-nav {
@@ -954,9 +980,6 @@ pre .xml .cdata {
         border-left: 0;
         padding-left: 0;
         border-top: 1px solid #ececec; } }
-
-.post-updated-at {
-  font-family: "Ubuntu mono", "monospace"; }
 
 .tags-container a {
   padding: 5px 10px;
