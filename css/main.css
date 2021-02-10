@@ -780,6 +780,15 @@ pre .xml .cdata {
   line-height: 1.8em;
   color: #999; }
 
+.post .highlight:before {
+  color: #6b7f94;
+  opacity: .3;
+  content: attr(data-lang);
+  font-size: 1.9em;
+  font-weight: 700;
+  position: absolute;
+  right: .3rem; }
+
 @media screen and (max-width: 768px) {
   .wrapper .post {
     padding-left: 15px;
