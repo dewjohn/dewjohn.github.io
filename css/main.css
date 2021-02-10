@@ -108,7 +108,7 @@ body {
   position: relative;
   color: #434648;
   background-color: #fff;
-  font: 400 16px/1.85 "Roboto", "Helvetica Neue", "Hiragino Sans GB", "LiHei Pro", Arial, serif;
+  font: 400 16px/1.85 Consolas, Roboto, sans-serif;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -webkit-font-feature-settings: "kern" 1;
