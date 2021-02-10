@@ -1,21 +1,5 @@
 @charset "UTF-8";
 @font-face {
-  font-family: 'Amstelvar';
-  font-display: swap;
-  src: url("https://cdn.jsdelivr.net/gh/dewjohn/CDN@latest/fonts/Amstelvar-Italic-VF.woff2") format("woff2-variations"), url("https://cdn.jsdelivr.net/gh/dewjohn/CDN@latest/fonts/Amstelvar-Italic-VF.woff2") format("woff2");
-  font-weight: 100 900;
-  font-stretch: 50% 125%;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Amstelvar';
-  font-display: swap;
-  src: url("https://cdn.jsdelivr.net/gh/dewjohn/CDN@latest/fonts/Amstelvar-Roman-VF.woff2") format("woff2-variations"), url("https://cdn.jsdelivr.net/gh/dewjohn/CDN@latest/fonts/Amstelvar-Roman-VF.woff2") format("woff2");
-  font-weight: 100 900;
-  font-stretch: 50% 125%;
-  font-style: italic; }
-
-@font-face {
   font-family: 'chinese-zodiac';
   font-display: swap;
   src: url("../fonts/chinese-zodiac.eot");
@@ -26,7 +10,7 @@
 .symbolic-animals {
   display: inline-block;
   font: normal normal normal 14px/1 chinese-zodiac;
-  font-size: larger;
+  font-size: 36px;
   float: right;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -124,7 +108,7 @@ body {
   position: relative;
   color: #434648;
   background-color: #fff;
-  font: 400 16px/1.85 "Amstelvar", "Roboto", "Helvetica Neue", "Hiragino Sans GB", "LiHei Pro", Arial, serif;
+  font: 400 16px/1.85 "Roboto", "Helvetica Neue", "Hiragino Sans GB", "LiHei Pro", Arial, serif;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -webkit-font-feature-settings: "kern" 1;
@@ -436,7 +420,7 @@ mark,
     @media screen and (max-width: 768px) {
       .menu .menu-link {
         opacity: 0.8; } }
-  .menu .menu-link:visited {
+  .menu .menu-link.active {
     opacity: 1;
     font-weight: 600; }
   @media screen and (max-width: 768px) {
@@ -685,7 +669,7 @@ pre .tex .special {
   color: #2973b7; }
 
 pre .class .title {
-  color: #fff; }
+  color: #b5aaaa; }
 
 pre .symbol,
 pre .symbol .string,
