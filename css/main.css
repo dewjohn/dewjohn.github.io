@@ -629,7 +629,7 @@ pre .tex .special {
   color: #2973b7; }
 
 pre .class .title {
-  color: #b5aaaa; }
+  color: #6af; }
 
 pre .symbol,
 pre .symbol .string,
@@ -938,6 +938,9 @@ pre .xml .cdata {
   padding: 5px 10px;
   background-color: #f6f8fa;
   margin-right: 10px; }
+
+.dis {
+  margin: 5em 0; }
 
 @keyframes fadein {
   0% {

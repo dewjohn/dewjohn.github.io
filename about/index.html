@@ -247,6 +247,22 @@
 <p><small id="Contact"><sup><a href="#Contact">[1]</a></sup> email: 894049579#qq.com(把@换成#)</small></p>
 
        </div>
+         
+    <div class="dis">
+        <script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
+        <div id="waline"></div>
+        <script>
+            new Waline({
+                el: '#waline',
+                path: location.pathname,
+                serverURL: 'https://john-waline.vercel.app/'
+            });
+        </script>
+    </div>
+
+
+
+
   </main>
 </div>
   <footer class="footer">
@@ -265,5 +281,6 @@
       <script src="/js/main.js"></script>
     
   
+  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script>
 </body>
 </html>
