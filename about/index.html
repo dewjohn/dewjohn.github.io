@@ -247,22 +247,37 @@
 <p><small id="Contact"><sup><a href="#Contact">[1]</a></sup> email: 894049579#qq.com(把@换成#)</small></p>
 
        </div>
-         
-    <div class="dis">
-        <script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
-        <div id="waline"></div>
-        <script>
-            new Waline({
+         <div class="dis">
+    
+        <div class="btn" id="comments-btn">查看评论</div>
+      
+     
+    <script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
+    <div id="waline"></div>
+    <script>
+        window.onload = function () {
+            var loadWaline = function () {
+                new Waline({
                 el: '#waline',
                 path: location.pathname,
-                serverURL: 'https://john-waline.vercel.app/'
+                avatarCDN: 'https://sdn.geekzu.org/avatar/',
+                serverURL: 'https://john-waline.vercel.app/',
+                avatar: ' ',
+                placeholder: "say something?"
             });
-        </script>
-    </div>
+            }
+            if (true) {
+                document.getElementById("comments-btn").onclick=function(){
+                    document.getElementById("comments-btn").style.display="none";
+                    loadWaline();
+		    }} else {
+            loadWaline();
+            }
+        };
+    </script>
 
 
-
-
+  </div>
   </main>
 </div>
   <footer class="footer">
@@ -275,8 +290,9 @@
       </div>
     </small>
   </footer>
-
   
+  
+
     
       <script src="/js/main.js"></script>
     

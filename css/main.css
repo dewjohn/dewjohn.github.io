@@ -940,7 +940,18 @@ pre .xml .cdata {
   margin-right: 10px; }
 
 .dis {
-  margin: 5em 0; }
+  margin-top: 5em; }
+
+.dis .btn {
+  display: block;
+  padding: 10px;
+  background-color: #f6f8fa;
+  text-align: center; }
+  .dis .btn:hover {
+    background-color: #f66;
+    color: #fff;
+    transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+    cursor: pointer; }
 
 @keyframes fadein {
   0% {
