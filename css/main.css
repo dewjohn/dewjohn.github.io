@@ -803,92 +803,92 @@ pre .xml .cdata {
   .post-meta span[itemprop="author"] {
     border-bottom: 1px dotted #ececec; }
 
-.page-content {
+.post {
   padding-top: 8px;
   word-break: break-all;
   overflow-wrap: break-word; }
-  .page-content iframe {
+  .post iframe {
     text-align: center; }
-  .page-content figure img {
+  .post figure img {
     border-radius: 2px; }
-  .page-content figure figcaption {
+  .post figure figcaption {
     margin-top: 5px;
     font-style: italic;
     font-size: 14px; }
-  .page-content a {
+  .post a {
     color: #f66;
     word-break: break-word;
     text-decoration: none;
     border-bottom: 2px solid transparent; }
-    .page-content a:hover {
+    .post a:hover {
       color: #f33;
       border-bottom-color: #f33; }
-    .page-content a:focus {
+    .post a:focus {
       color: #f66; }
-  .page-content > p {
+  .post > p {
     margin: 0;
     padding-top: 15px;
     padding-bottom: 15px; }
-  .page-content ul.task-list {
+  .post ul.task-list {
     list-style: none;
     margin: 0; }
-    .page-content ul.task-list li::before {
+    .post ul.task-list li::before {
       content: ""; }
-    .page-content ul.task-list li input[type="checkbox"] {
+    .post ul.task-list li input[type="checkbox"] {
       margin-right: 10px; }
-  .page-content dl dt {
+  .post dl dt {
     font-weight: 700; }
-  .page-content .post h1,
-  .page-content h2,
-  .page-content h3,
-  .page-content h4,
-  .page-content h5,
-  .page-content h6 {
+  .post .post h1,
+  .post h2,
+  .post h3,
+  .post h4,
+  .post h5,
+  .post h6 {
     color: #0d122b;
     font-weight: 700;
     margin-top: 30px;
     margin-bottom: 0; }
-    .page-content .post h1:hover .headerlink,
-    .page-content h2:hover .headerlink,
-    .page-content h3:hover .headerlink,
-    .page-content h4:hover .headerlink,
-    .page-content h5:hover .headerlink,
-    .page-content h6:hover .headerlink {
+    .post .post h1:hover .headerlink,
+    .post h2:hover .headerlink,
+    .post h3:hover .headerlink,
+    .post h4:hover .headerlink,
+    .post h5:hover .headerlink,
+    .post h6:hover .headerlink {
       color: #f66;
       opacity: 1; }
-    .page-content .post h1 .headerlink,
-    .page-content h2 .headerlink,
-    .page-content h3 .headerlink,
-    .page-content h4 .headerlink,
-    .page-content h5 .headerlink,
-    .page-content h6 .headerlink {
+    .post .post h1 .headerlink,
+    .post h2 .headerlink,
+    .post h3 .headerlink,
+    .post h4 .headerlink,
+    .post h5 .headerlink,
+    .post h6 .headerlink {
       position: relative;
       opacity: 0;
       outline: none; }
-      .page-content .post h1 .headerlink::before,
-      .page-content h2 .headerlink::before,
-      .page-content h3 .headerlink::before,
-      .page-content h4 .headerlink::before,
-      .page-content h5 .headerlink::before,
-      .page-content h6 .headerlink::before {
+      .post .post h1 .headerlink::before,
+      .post h2 .headerlink::before,
+      .post h3 .headerlink::before,
+      .post h4 .headerlink::before,
+      .post h5 .headerlink::before,
+      .post h6 .headerlink::before {
         content: "#";
         position: absolute;
         right: -3px;
         width: 1em;
         font-weight: 700; }
-  .page-content h1 {
+  .post h1 {
     font-size: 24px; }
-  .page-content h2 {
+  .post h2 {
     font-size: 22px; }
-  .page-content h3 {
+  .post h3 {
     font-size: 20px;
     border-bottom: 1px solid #ececec;
     padding-bottom: 4px; }
-  .page-content h4 {
+  .post h4 {
     font-size: 20px; }
-  .page-content h5 {
+  .post h5 {
     font-size: 16px; }
-  .page-content h6 {
+  .post h6 {
     font-size: 14px; }
 
 .post-nav {
@@ -998,18 +998,18 @@ body[data-theme="dark"] {
   body[data-theme="dark"] table td,
   body[data-theme="dark"] table tr {
     border-color: #1b1d25; }
-  body[data-theme="dark"] .page-content a {
+  body[data-theme="dark"] .post a {
     color: #ff5277; }
-    body[data-theme="dark"] .page-content a:hover, body[data-theme="dark"] .page-content a:active, body[data-theme="dark"] .page-content a:focus {
+    body[data-theme="dark"] .post a:hover, body[data-theme="dark"] .post a:active, body[data-theme="dark"] .post a:focus {
       color: #ff2957; }
-  body[data-theme="dark"] .page-content h3 {
+  body[data-theme="dark"] .post h3 {
     border-color: #1b1d25; }
-  body[data-theme="dark"] .page-content h1 .anchor-head,
-  body[data-theme="dark"] .page-content h2 .anchor-head,
-  body[data-theme="dark"] .page-content h3 .anchor-head,
-  body[data-theme="dark"] .page-content h4 .anchor-head,
-  body[data-theme="dark"] .page-content h5 .anchor-head,
-  body[data-theme="dark"] .page-content h6 .anchor-head {
+  body[data-theme="dark"] .post h1 .anchor-head,
+  body[data-theme="dark"] .post h2 .anchor-head,
+  body[data-theme="dark"] .post h3 .anchor-head,
+  body[data-theme="dark"] .post h4 .anchor-head,
+  body[data-theme="dark"] .post h5 .anchor-head,
+  body[data-theme="dark"] .post h6 .anchor-head {
     color: #ff5277; }
   body[data-theme="dark"] code.highlighter-rouge {
     background-color: #1b1d25; }
