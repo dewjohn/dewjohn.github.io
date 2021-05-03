@@ -3,6 +3,13 @@
   const body = document.body;
   const lamp = document.getElementById("mode");
 
+  let elem = document.querySelectorAll('figure.highlight')
+  elem.forEach(function(item){
+    let langName = item.getAttribute('class').split(' ')[1]
+    if (langName === 'plain' || langName === undefined) langName = 'Code'
+    item.setAttribute('data-lang',langName);
+  })
+
   const toggleTheme = (state) => {
     if (state === "dark") {
       localStorage.setItem("theme", "light");
@@ -29,3 +36,4 @@
       : area.classList.remove("blurry");
   });
 })();
+
