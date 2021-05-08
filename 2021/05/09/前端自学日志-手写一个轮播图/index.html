@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>前端自学日志-手写一个轮播图 [ 小钟同学的博客 ]</title>
+
+  <link rel="icon" href="/img/favicon.ico">
+
+
+    <meta name="author" content="John">
+
+
+
+    <meta name="Description" content="小钟同学的博客，记录编程生涯！">
+
+
+
+  <link rel="alternate" href="/atom.xml " title="小钟同学的博客" type="application/atom+xml">
+
+
+
+  
+    <link rel="stylesheet" href="/css/main.css">
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+  <body data-theme="light" class="notransition">
+    <script>
+      const body = document.body;
+      const data = body.getAttribute("data-theme");
+      const initTheme = (state) => {
+        if (state === "dark") {
+          body.setAttribute("data-theme", "dark");
+        } else if (state === "light") {
+          body.removeAttribute("data-theme");
+        } else {
+          localStorage.setItem("theme", data);
+        }
+      };
+   
+      initTheme(localStorage.getItem("theme"));
+      
+      setTimeout(() => body.classList.remove("notransition"), 75);
+    </script>
+  <div class="navbar" role="navigation">
+    <nav class="menu">
+      <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+      <label for="menu-trigger">
+        <span class="menu-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"
+            />
+          </svg>
+        </span>
+      </label>
+      <a id="mode">
+        <svg
+          class="mode-sunny"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 512 512"
+        >
+          <title>LIGHT</title>
+          <line
+            x1="256"
+            y1="48"
+            x2="256"
+            y2="96"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="256"
+            y1="416"
+            x2="256"
+            y2="464"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="403.08"
+            y1="108.92"
+            x2="369.14"
+            y2="142.86"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="142.86"
+            y1="369.14"
+            x2="108.92"
+            y2="403.08"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="464"
+            y1="256"
+            x2="416"
+            y2="256"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="96"
+            y1="256"
+            x2="48"
+            y2="256"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="403.08"
+            y1="403.08"
+            x2="369.14"
+            y2="369.14"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="142.86"
+            y1="142.86"
+            x2="108.92"
+            y2="108.92"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <circle
+            cx="256"
+            cy="256"
+            r="80"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+        </svg>
+        <svg
+          class="mode-moon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 512 512"
+        >
+          <title>DARK</title>
+          <line
+            x1="256"
+            y1="48"
+            x2="256"
+            y2="96"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="256"
+            y1="416"
+            x2="256"
+            y2="464"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="403.08"
+            y1="108.92"
+            x2="369.14"
+            y2="142.86"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="142.86"
+            y1="369.14"
+            x2="108.92"
+            y2="403.08"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="464"
+            y1="256"
+            x2="416"
+            y2="256"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="96"
+            y1="256"
+            x2="48"
+            y2="256"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="403.08"
+            y1="403.08"
+            x2="369.14"
+            y2="369.14"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="142.86"
+            y1="142.86"
+            x2="108.92"
+            y2="108.92"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <circle
+            cx="256"
+            cy="256"
+            r="80"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+        </svg>
+      </a>
+      <div class="trigger">
+        <div class="trigger-container">
+          
+            <a class="menu-link" href="/">Home</a>
+          
+            <a class="menu-link" href="/about">About</a>
+          
+            <a class="menu-link" href="/archives">Archives</a>
+          
+            <a class="menu-link" href="/tags">Tags</a>
+          
+        </div>
+      </div>
+    </nav>
+  </div>
+  
+<div class="wrapper post">
+  <main class="page-content" aria-label="Content">
+      <header class="header">
+        
+          <div class="tags">
+            <a href="/tags/JS/" class="tag"># JS</a>
+          </div>
+        
+        <h1 class="header-title" itemprop="headline">前端自学日志-手写一个轮播图</h1>
+          <div class="post-meta">
+            <time>May 09, 2021</time>
+            <span itemprop="author">
+              <span itemprop="name">John</span>
+            </span>
+          </div>
+        </header>
+
+          <div class="page-content"><h1 id="定义HTML部分"><a href="#定义HTML部分" class="headerlink" title="定义HTML部分"></a>定义HTML部分</h1><p>首先定义轮播图(carousel)部分，这里准备了5张图片还有两个左右按钮(leftBtn、rightBtn)</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;carousel&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">&quot;list&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;./beijing/0.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;./beijing/1.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;./beijing/2.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;./beijing/3.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;./beijing/4.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;leftBtn&quot;</span> <span class="attr">class</span>=<span class="string">&quot;leftBtn&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;rightBtn&quot;</span> <span class="attr">class</span>=<span class="string">&quot;rightBtn&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="CSS部分"><a href="#CSS部分" class="headerlink" title="CSS部分"></a>CSS部分</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#carousel</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">650px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">360px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">50px</span> auto;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#carousel</span> <span class="selector-tag">ul</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">6000px</span>;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">transition</span>: left .<span class="number">5s</span> ease <span class="number">0s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#carousel</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#carousel</span> <span class="selector-class">.leftBtn</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">background-color</span>: paleturquoise;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: -<span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#carousel</span> <span class="selector-class">.rightBtn</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">background-color</span>: paleturquoise;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: -<span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="关键js"><a href="#关键js" class="headerlink" title="关键js"></a>关键js</h3><p>首先获取两个按钮和图片列表</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> leftBtn = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;leftBtn&#x27;</span>);</span><br><span class="line"><span class="keyword">let</span> rightBtn = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;rightBtn&#x27;</span>);</span><br><span class="line"><span class="keyword">let</span> list = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;list&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>然后再克隆第一张图片，所谓轮播其实就是克隆第一张图片插入到最后一张图片后面，当点击按钮切换到最后一张图片（第四张图片）时，让计数器变成0，也就是第一张照片，再点击时，就会切换到第二张了。<br>左按键，首先判断是否在第一张，如果在第一张，就设置计数器到第五张，也就是克隆那张。否则就正常向左切换</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> leftBtn = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;leftBtn&#x27;</span>);</span><br><span class="line"><span class="keyword">let</span> rightBtn = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;rightBtn&#x27;</span>);</span><br><span class="line"><span class="keyword">let</span> list = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;list&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> cloneli = list.firstElementChild.cloneNode(<span class="literal">true</span>);</span><br><span class="line">list.appendChild(cloneli);</span><br><span class="line"><span class="keyword">let</span> idx = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">let</span> lock = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">rightBtn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!lock) <span class="keyword">return</span>;</span><br><span class="line">    lock = <span class="literal">false</span>;</span><br><span class="line">    list.style.transition = <span class="string">&#x27;left .5s ease 0s&#x27;</span></span><br><span class="line">    idx++;</span><br><span class="line">    <span class="keyword">if</span>(idx&gt;<span class="number">4</span>)&#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            list.style.transition=<span class="string">&#x27;none&#x27;</span></span><br><span class="line">            list.style.left=<span class="number">0</span>;</span><br><span class="line">            idx=<span class="number">0</span>;</span><br><span class="line">        &#125;,<span class="number">500</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        lock = <span class="literal">true</span>;</span><br><span class="line">    &#125;,<span class="number">500</span>)</span><br><span class="line">    list.style.left=-idx*<span class="number">650</span>+<span class="string">&#x27;px&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line">leftBtn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!lock) <span class="keyword">return</span>;</span><br><span class="line">    lock = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span>(idx ==<span class="number">0</span>)&#123;</span><br><span class="line">        list.style.transition=<span class="string">&#x27;none&#x27;</span>;</span><br><span class="line">        list.style.left=-<span class="number">5</span>*<span class="number">650</span>+<span class="string">&#x27;px&#x27;</span>;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        list.style.transition = <span class="string">&#x27;left .5s ease 0s&#x27;</span></span><br><span class="line">        idx=<span class="number">4</span>;</span><br><span class="line">        list.style.left=-idx*<span class="number">650</span>+<span class="string">&#x27;px&#x27;</span>;</span><br><span class="line">    &#125;,<span class="number">0</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        idx--;</span><br><span class="line">        list.style.left=-idx*<span class="number">650</span>+<span class="string">&#x27;px&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        lock = <span class="literal">true</span>;</span><br><span class="line">    &#125;,<span class="number">500</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</div>
+          <nav class="post-nav">
+    
+    
+    <a class="post-nav-item post-nav-next" href="/2021/02/24/C-%E8%AF%84%E5%A7%94%E6%89%93%E5%88%86%E7%B3%BB%E7%BB%9F/">
+      <div class="nav-arrow">OLDER&nbsp;&gt;</div>
+      <span class="post-title">CPP之评委打分系统</span>
+    </a>
+    
+  </nav>
+
+   </main>
+</div>
+
+  <footer class="footer">
+    <small class="footer_copyright">
+      <div id="bottom-inner">
+        © 2021 Site by John using
+        <a target="_blank" rel="noopener" href="http://hexo.io">hexo blog framework</a>.
+        <br>
+        <p> Under Construction 🚧</p>
+      </div>
+    </small>
+  </footer>
+  
+  
+
+    
+      <script src="/js/main.js"></script>
+    
+  
+  <script>
+    window.FPConfig = {
+      delay: 0,
+      ignoreKeywords: [],
+      maxRPS: 3,
+      hoverDelay: 50,
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+</body>
+</html>
