@@ -924,10 +924,8 @@ pre .xml .cdata {
       padding-left: 20px; }
   @media screen and (max-width: 768px) {
     .post-nav {
-      display: block;
       font-size: 14px; }
       .post-nav .post-nav-item {
-        display: flex;
         width: 100%; }
       .post-nav .post-nav-item:nth-child(even) {
         border-left: 0;
